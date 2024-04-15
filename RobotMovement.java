@@ -29,7 +29,7 @@
         for (int i = 0; i < notes.length; i++) {
             Sound.playTone(notes[i], durations[i]);
             try {
-                Thread.sleep(50); // Pause between notes
+                Thread.sleep(50); // Pause between notes (adjust as needed)
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
