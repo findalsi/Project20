@@ -1,0 +1,58 @@
+// Display elapsed time on LCD screen
+            long elapsedTime = System.currentTimeMillis() - startTime;
+            LCD.drawString("Time: " + elapsedTime / 1000 + " s", 0, 4);
+
+            // Add a small delay to reduce CPU load
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        // Close sensors and motors after ESCAPE button press
+        colorSensor.close();
+        distanceSensor.close();
+        leftMotor.close();
+        rightMotor.close();
+    }
+
+    /**
+     * Turns the robot right by approximately 90 degrees.
+     */
+    private static void turnRight90() {
+        // Turn right 90 degrees (adjust motor speeds and duration as needed)
+        leftMotor.setSpeed(150); // Adjust motor speed for smoother turning
+        rightMotor.setSpeed(150); // Adjust motor speed for smoother turning
+
+        // Rotate right motor backward and left motor forward to turn right
+        leftMotor.forward();
+        rightMotor.backward();
+
+        // Wait for a duration to achieve a turn (adjust as needed)
+        try {
+            Thread.sleep(900); // Adjust duration for smoother turning
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Moves the robot forward.
+     */
+    private static void moveForward() {
+        // Move forward after turning right or left
+        leftMotor.setSpeed(200); // Adjust motor speed as needed
+        rightMotor.setSpeed(200); // Adjust motor speed as needed
+
+        // Both motors move forward
+        leftMotor.forward();
+        rightMotor.forward();
+
+        // Wait for a duration to move forward (adjust as needed)
+        try {
+            Thread.sleep(2500); // Adjust duration as needed for forward movement
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
