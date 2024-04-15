@@ -121,7 +121,7 @@ public class LineFollowerRobot {
     }
 
     /**
-     * Moves the robot forward.
+     *  robot forward movement codes.
      */
     private static void moveForward() {
         // Move forward after turning right or left
