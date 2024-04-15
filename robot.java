@@ -78,7 +78,7 @@ public class LineFollowerRobot {
                 moveForward();
                 turnLeft90();
                 moveForward();
-                obstacleDetected = false; // Resume line following after obstacle avoidance
+                obstacleDetected = false; // Resume line following after obstacle avoidance, robot follows the line to the same direction.
             }
             // Display elapsed time on LCD screen
             long elapsedTime = System.currentTimeMillis() - startTime;
