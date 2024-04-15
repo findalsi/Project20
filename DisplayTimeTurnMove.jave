@@ -1,4 +1,4 @@
-// Display elapsed time on LCD screen
+// Display elapsed time on LCD screen after stopping
             long elapsedTime = System.currentTimeMillis() - startTime;
             LCD.drawString("Time: " + elapsedTime / 1000 + " s", 0, 4);
 
