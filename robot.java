@@ -14,6 +14,7 @@ import lejos.hardware.Sound;
  * This class implements a line follower robot that can avoid obstacles.
  */
 public class LineFollowerRobot {
+    // Declaration of motors and sensors
     static EV3LargeRegulatedMotor leftMotor = new EV3LargeRegulatedMotor(MotorPort.A);
     static EV3LargeRegulatedMotor rightMotor = new EV3LargeRegulatedMotor(MotorPort.B);
     static EV3ColorSensor colorSensor = new EV3ColorSensor(SensorPort.S2);
