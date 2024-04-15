@@ -1,4 +1,4 @@
-// Obstacle detection and avoidance
+// Obstacle detection and avoidance code for the robot
             if (!obstacleDetected && distanceValue < 10) { // Obstacle detected within 10 cm
                 obstacleDetected = true;
                 leftMotor.stop();
